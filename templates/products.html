@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Martyn Steady Corp LLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .products-hero {
+            background: var(--white);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .products-hero h1 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .products-hero p {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .products-section {
+            padding: 3rem 0;
+        }
+
+        .product-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .product-card h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .product-card p {
+            color: var(--text);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .product-card .contact-info {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .coming-soon {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .coming-soon h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="/static/images/logo.png" alt="Martyn Steady Corp LLC">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/performance">Performance</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/login" class="btn-nav">Client Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="products-hero">
+        <div class="container">
+            <h1>Our Investment Products</h1>
+            <p>Comprehensive financial solutions tailored to help you achieve your investment goals through diversified
+                strategies and expert management.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+
+            <div class="product-card">
+                <h2>💱 Currency Exchange</h2>
+                <p>Access competitive currency exchange services with low rates and minimal fees. Our international
+                    network ensures you get the best value for your money transfers and currency conversions.</p>
+            </div>
+
+            <div class="product-card">
+                <h2>💼 Financial Advisory Services</h2>
+                <p>Business and personal advisors for your business, e-commerce, tax planning, and other investment
+                    opportunities. Connect with our expert advisors via Zoom call to discuss your financial strategy.
+                </p>
+                <div class="contact-info">
+                    📧 <strong>Email:</strong> financeofficer@martynsteadycorp.com<br>
+                    📞 Leave your name, number, and preferred date for consultation
+                </div>
+            </div>
+
+            <div class="product-card">
+                <h2>📊 Portfolio Management</h2>
+                <p>We can manage your assets, optimize your portfolio, and enhance your returns through our overseas
+                    ventures in oil, technology, and emerging markets. Our experienced team ensures your investments are
+                    strategically positioned for growth.</p>
+            </div>
+
+            <div class="product-card">
+                <h2>₿ Crypto Arbitrage</h2>
+                <p>Our professional traders work around the clock to capitalize on cryptocurrency market inefficiencies.
+                    Pool your investment with us and potentially grow your income through strategic crypto arbitrage
+                    opportunities.</p>
+            </div>
+
+            <div class="product-card">
+                <h2>💹 Forex Trading</h2>
+                <p>Leverage our international company's overseas traders to earn consistent returns. Our traders
+                    deliver:</p>
+                <p><strong>Risk-Free Option:</strong> 3% daily dividends with guaranteed capital protection<br>
+                    <strong>Growth Option:</strong> Up to 10% potential returns with calculated risk strategies
+                </p>
+            </div>
+
+            <!-- Coming Soon Section -->
+            <div class="coming-soon">
+                <h2>🚀 Coming Soon</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">We're expanding our services to better serve your
+                    financial needs</p>
+                <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                    <p>✓ Private Business Loans & Start-up Funding</p>
+                    <p>✓ Aggressive Growth Mutual Funds</p>
+                    <p>✓ Balanced Mutual Funds</p>
+                    <p>✓ And much more...</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget">
+        <button id="chat-toggle-btn" onclick="toggleChat()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Support Chat</span>
+        </button>
+
+        <div id="chat-window" class="hidden">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <div class="status-dot"></div>
+                    <span>Support Team</span>
+                </div>
+                <button class="close-btn" onclick="toggleChat()">&times;</button>
+            </div>
+            <div id="chat-messages"></div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type your message..."
+                    onkeypress="handleKeyPress(event)">
+                <button id="send-btn" onclick="sendMessage()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/chat.js"></script>
+</body>
+
+</html>

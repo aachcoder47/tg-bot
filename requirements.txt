@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+python-telegram-bot
+jinja2
+python-multipart
+websockets

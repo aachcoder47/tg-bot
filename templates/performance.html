@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance - Martyn Steady Corp LLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .performance-hero {
+            background: var(--white);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .performance-hero h1 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .dividend-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .dividend-card {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .dividend-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .dividend-card .rate {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .calculator-section {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 3rem 0;
+        }
+
+        .calculator-section h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .input-group {
+            margin-bottom: 2rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .result-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid var(--primary);
+        }
+
+        .result-card h4 {
+            color: var(--text);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .result-card .amount {
+            color: var(--primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .chart-container {
+            margin: 3rem 0;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart-container h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="/static/images/logo.png" alt="Martyn Steady Corp LLC">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/performance">Performance</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/login" class="btn-nav">Client Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="performance-hero">
+        <div class="container">
+            <h1>Investment Performance</h1>
+            <p style="font-size: 1.1rem; color: #64748b; max-width: 700px; margin: 1rem auto;">Track your potential
+                returns with our transparent dividend structure</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section style="padding: 3rem 0; background: #f1f5f9;">
+        <div class="container">
+
+            <!-- Dividend Rates -->
+            <div class="dividend-cards">
+                <div class="dividend-card">
+                    <h3>Daily Dividends</h3>
+                    <div class="rate">5%</div>
+                    <p>Compounding daily returns</p>
+                </div>
+                <div class="dividend-card">
+                    <h3>Monthly Dividends</h3>
+                    <div class="rate">11%</div>
+                    <p>Paid on the 5th of each month</p>
+                </div>
+                <div class="dividend-card">
+                    <h3>Yearly Dividends</h3>
+                    <div class="rate">22%</div>
+                    <p>Annual return on investment</p>
+                </div>
+            </div>
+
+            <!-- Calculator -->
+            <div class="calculator-section">
+                <h2>💰 Investment Calculator</h2>
+                <p style="text-align: center; color: #64748b; margin-bottom: 2rem;">Calculate your potential returns
+                    based on your initial investment</p>
+
+                <div class="input-group">
+                    <label for="investment">Initial Investment Amount ($)</label>
+                    <input type="number" id="investment" min="2000" max="100000" value="10000" step="1000"
+                        oninput="calculateReturns()">
+                    <small style="color: #64748b;">Range: $2,000 - $100,000</small>
+                </div>
+
+                <div class="input-group">
+                    <label for="term">Investment Term</label>
+                    <select id="term" onchange="calculateReturns()">
+                        <option value="1">1 Month</option>
+                        <option value="3">3 Months</option>
+                        <option value="6">6 Months</option>
+                        <option value="12" selected>12 Months</option>
+                        <option value="24">24 Months</option>
+                    </select>
+                </div>
+
+                <div class="results-grid" id="results">
+                    <!-- Results will be populated here -->
+                </div>
+            </div>
+
+            <!-- Chart -->
+            <div class="chart-container">
+                <h2>📈 Growth Projection</h2>
+                <canvas id="growthChart"></canvas>
+            </div>
+
+            <!-- Important Notes -->
+            <div
+                style="background: var(--white); padding: 2rem; border-radius: 12px; margin-top: 2rem; border-left: 4px solid var(--gold);">
+                <h3 style="color: var(--primary); margin-bottom: 1rem;">📋 Important Information</h3>
+                <ul style="color: var(--text); line-height: 2;">
+                    <li>Dividends are paid monthly on the 5th of each month</li>
+                    <li>Initial deposit is subject to a 60-day hold period</li>
+                    <li>Monthly dividends can be withdrawn at any time</li>
+                    <li>Performance-based fees only - we succeed when you succeed</li>
+                    <li>All calculations are estimates based on historical performance</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget">
+        <button id="chat-toggle-btn" onclick="toggleChat()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Support Chat</span>
+        </button>
+
+        <div id="chat-window" class="hidden">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <div class="status-dot"></div>
+                    <span>Support Team</span>
+                </div>
+                <button class="close-btn" onclick="toggleChat()">&times;</button>
+            </div>
+            <div id="chat-messages"></div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type your message..."
+                    onkeypress="handleKeyPress(event)">
+                <button id="send-btn" onclick="sendMessage()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/chat.js"></script>
+    <script>
+        let chart;
+
+        function calculateReturns() {
+            const investment = parseFloat(document.getElementById('investment').value);
+            const term = parseInt(document.getElementById('term').value);
+
+            // Calculate returns
+            const monthlyRate = 0.11; // 11% monthly
+            const yearlyRate = 0.22; // 22% yearly
+
+            const monthlyReturn = investment * monthlyRate * term;
+            const totalMonthly = investment + monthlyReturn;
+
+            const yearlyReturn = investment * yearlyRate * (term / 12);
+            const totalYearly = investment + yearlyReturn;
+
+            // Display results
+            const resultsHTML = `
+                <div class="result-card">
+                    <h4>Initial Investment</h4>
+                    <div class="amount">$${investment.toLocaleString()}</div>
+                </div>
+                <div class="result-card">
+                    <h4>Monthly Dividends (${term} mo)</h4>
+                    <div class="amount">$${monthlyReturn.toLocaleString(undefined, { maximumFractionDigits: 2 })}</div>
+                </div>
+                <div class="result-card">
+                    <h4>Total Value</h4>
+                    <div class="amount">$${totalMonthly.toLocaleString(undefined, { maximumFractionDigits: 2 })}</div>
+                </div>
+                <div class="result-card">
+                    <h4>Yearly Projection</h4>
+                    <div class="amount">$${totalYearly.toLocaleString(undefined, { maximumFractionDigits: 2 })}</div>
+                </div>
+            `;
+            document.getElementById('results').innerHTML = resultsHTML;
+
+            // Update chart
+            updateChart(investment, term);
+        }
+
+        function updateChart(investment, term) {
+            const labels = [];
+            const data = [];
+            const monthlyRate = 0.11;
+
+            for (let i = 0; i <= term; i++) {
+                labels.push(`Month ${i}`);
+                data.push(investment + (investment * monthlyRate * i));
+            }
+
+            if (chart) {
+                chart.destroy();
+            }
+
+            const ctx = document.getElementById('growthChart').getContext('2d');
+            chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Portfolio Value ($)',
+                        data: data,
+                        borderColor: '#3d5a80',
+                        backgroundColor: 'rgba(61, 90, 128, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            ticks: {
+                                callback: function (value) {
+                                    return '$' + value.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize on page load
+        calculateReturns();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martyn Steady Corp LLC - Investment Excellence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="/static/images/logo.png" alt="Martyn Steady Corp LLC">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/performance">Performance</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/login" class="btn-nav">Client Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <img src="/static/images/logo.png" alt="Martyn Steady Corp LLC"
+                style="height: 200px; margin: 0 auto 2rem; display: block;">
+            <h1>Secure Your Financial Future with Strategic Investments</h1>
+            <p>We help our clients achieve exceptional returns through strategic, data-driven investments managed by
+                industry veterans specializing in global markets.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">11%</span>
+                    <span class="stat-label">Monthly Dividends</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Multi-National</span>
+                    <span class="stat-label">Agents & Advisors</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2025</span>
+                    <span class="stat-label">Years of Service</span>
+                </div>
+            </div>
+            <br>
+            <a href="/performance" class="btn-primary">View Performance</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Global Market Expertise</h3>
+                    <p>We make time for our clients as we deal with India, China, Dubai, USA and other markets. Our team
+                        of analysts works daily to ensure optimal performance.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Performance-Based Fees</h3>
+                    <p>The fund is entirely performance based. There are no additional costs, and fund managers are only
+                        compensated if the fund is profitable.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Monthly Dividends</h3>
+                    <p>Dividends are paid monthly, on the 5th of each month. The initial deposit is subject to a 60-day
+                        hold period; however, you can withdraw your monthly dividends as and when you like.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget">
+        <!-- Chat Button -->
+        <button id="chat-toggle-btn" onclick="toggleChat()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Support Chat</span>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="chat-window" class="hidden">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <div class="status-dot"></div>
+                    <span>Support Team</span>
+                </div>
+                <button class="close-btn" onclick="toggleChat()">&times;</button>
+            </div>
+            <div id="chat-messages">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type your message..."
+                    onkeypress="handleKeyPress(event)">
+                <button id="send-btn" onclick="sendMessage()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="/static/images/logo.png" alt="Martyn Steady Corp LLC"
+                        style="height: 60px; margin-bottom: 1rem;">
+                    <p>Established in 2025</p>
+                    <p style="margin-top: 1rem;">
+                        <a href="https://t.me/YourBusinessTelegram" target="_blank"
+                            style="color: var(--accent); text-decoration: none; font-weight: 600;">
+                            📱 Connect on Telegram
+                        </a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>📧 receptionist@martynsteadycorp.com</p>
+                    <p>📧 support@martynsteadycorp.com</p>
+                    <p>📧 financeofficer@martynsteadycorp.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <p>1209 MOUNTAIN ROAD PL NE<br>STE N<br>ALBUQUERQUE, NM 87110</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <p><a href="/privacy">Privacy Policy</a></p>
+                    <p><a href="/terms">Terms & Conditions</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Martyn Steady Corp LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/chat.js"></script>
+</body>
+
+</html>

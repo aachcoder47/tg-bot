@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Martyn Steady Corp LLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-hero .tagline {
+            font-size: 1.5rem;
+            font-style: italic;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+        }
+
+        .about-section {
+            padding: 4rem 0;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .about-content p {
+            color: var(--text);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .why-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--primary);
+        }
+
+        .why-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .why-card p {
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .contact-section {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 3rem;
+        }
+
+        .contact-section h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .contact-card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-card p {
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .highlight-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="/static/images/logo.png" alt="Martyn Steady Corp LLC">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/performance">Performance</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/login" class="btn-nav">Client Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Martyn Steady Corp LLC</h1>
+            <p class="tagline">"One Method of Action That Never Fails Our Company"</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="about-section" style="background: #f1f5f9;">
+        <div class="container">
+
+            <div class="about-content">
+                <h2>Our Story</h2>
+                <p>Launched in 2025, Martyn Steady Corp LLC is positioned to become the newest powerhouse in the
+                    financial field. With valuable experience in finance and our cutting-edge methods of work, we are
+                    set to thrive in the competitive investment landscape.</p>
+
+                <p>Specializing in global markets and investments, our predictions and statistical analysis consistently
+                    deliver winning results. We combine decades of industry expertise with innovative approaches to
+                    wealth management and investment strategies.</p>
+
+                <p>Our team operates across multiple international markets including India, China, Dubai, USA, and other
+                    strategic locations. This global presence allows us to identify and capitalize on opportunities
+                    around the clock, ensuring your investments are always working for you.</p>
+            </div>
+
+            <!-- Why Choose Us -->
+            <div style="margin-top: 4rem;">
+                <h2 style="text-align: center; color: var(--primary); font-size: 2.5rem; margin-bottom: 3rem;">Why
+                    Choose Us</h2>
+
+                <div class="why-us-grid">
+                    <div class="why-card">
+                        <h3>🎯 Extensive Investment Experience</h3>
+                        <p>99% of the client assets under our administration are managed by highly experienced portfolio
+                            managers with proven expertise in the industry.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <h3>🌍 Unrestricted Investment Approach</h3>
+                        <p>We maintain an unrestricted approach to investment opportunities, allowing us to pursue the
+                            best returns across all asset classes and global markets.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <h3>👔 Long-Tenured Advisors</h3>
+                        <p>Our advisors bring extensive experience in the fields of management, business operations, and
+                            strategic investment planning.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <h3>📈 Industry-Leading Returns</h3>
+                        <p>We deliver industry-leading investment returns with a strong focus on risk management and
+                            capital preservation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Highlight Box -->
+            <div class="highlight-box">
+                <h3>The Underdog with Leading Performance</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8;">Choose us because we are going to be the big powerhouse
+                    of the financial game. Organically we are the underdog, but our performance leads the way. We are
+                    discreet, secure, and passionate about growing your wealth.</p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-section">
+                <h2>📞 Contact Information</h2>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h4>📍 Corporate Address</h4>
+                        <p>1209 MOUNTAIN ROAD PL NE<br>
+                            STE N<br>
+                            ALBUQUERQUE, NM 87110</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h4>📧 General Inquiries</h4>
+                        <p><strong>Receptionist:</strong><br>
+                            receptionist@martynsteadycorp.com</p>
+                        <p style="font-size: 0.9rem; color: #64748b;">For operating hours, admissions, and general
+                            contact information</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h4>💼 Financial Advisory</h4>
+                        <p><strong>Finance Officer:</strong><br>
+                            financeofficer@martynsteadycorp.com</p>
+                        <p style="font-size: 0.9rem; color: #64748b;">Email regarding your business/personal financial
+                            matters. We'll call you as soon as possible.<br>
+                            <strong>*International calling isn't billed to you*</strong>
+                        </p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h4>🛟 Support</h4>
+                        <p><strong>Customer Support:</strong><br>
+                            support@martynsteadycorp.com</p>
+                        <p style="font-size: 0.9rem; color: #64748b;">For all issues and inquiries regarding your
+                            experience at our firm</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal -->
+            <div
+                style="background: var(--white); padding: 2rem; border-radius: 12px; margin-top: 2rem; text-align: center;">
+                <p style="color: #64748b; font-size: 0.9rem;">
+                    <strong>Privacy Policy</strong> | <strong>Terms & Conditions</strong><br>
+                    Established in 2025 | Martyn Steady Corp LLC | All Rights Reserved
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget">
+        <button id="chat-toggle-btn" onclick="toggleChat()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Support Chat</span>
+        </button>
+
+        <div id="chat-window" class="hidden">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <div class="status-dot"></div>
+                    <span>Support Team</span>
+                </div>
+                <button class="close-btn" onclick="toggleChat()">&times;</button>
+            </div>
+            <div id="chat-messages"></div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type your message..."
+                    onkeypress="handleKeyPress(event)">
+                <button id="send-btn" onclick="sendMessage()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/chat.js"></script>
+</body>
+
+</html>
