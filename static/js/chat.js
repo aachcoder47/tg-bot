@@ -63,10 +63,10 @@ function sendMessage() {
 
     // Append locally
     appendMessage(text, "user");
-    
+
     // Send to server
     ws.send(JSON.stringify({ content: text }));
-    
+
     chatInput.value = "";
 }
 
@@ -75,7 +75,7 @@ function appendMessage(text, sender) {
     msgDiv.classList.add('message', sender);
     msgDiv.innerText = text;
     chatMessages.appendChild(msgDiv);
-    
+
     // Scroll to bottom
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
@@ -85,3 +85,37 @@ function handleKeyPress(event) {
         sendMessage();
     }
 }
+
+// Mobile Menu Toggle
+function toggleMobileMenu() {
+    const navLinks = document.getElementById('navLinks');
+    if (navLinks) {
+        navLinks.classList.toggle('active');
+    }
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function (event) {
+    const navLinks = document.getElementById('navLinks');
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+
+    if (navLinks && menuToggle) {
+        if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+            navLinks.classList.remove('active');
+        }
+    }
+});
+
+// Close mobile menu when clicking a link
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            const navLinksEl = document.getElementById('navLinks');
+            if (navLinksEl) {
+                navLinksEl.classList.remove('active');
+            }
+        });
+    });
+});
+
