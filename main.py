@@ -13,7 +13,7 @@ import uvicorn
 
 # --- Configuration ---
 # Use environment variables for production, fallback to defaults for local dev
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8306417982:AAG_iTJsRV3aMviAqrV1gOk5ecICNPh4fg0")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8348076625:AAF7lDKUPM4a8Q1Copq6do1xQVimJ8tuqxY")
 ADMIN_CHAT_ID = os.getenv("ADMIN_CHAT_ID", "8203104058")
 
 # Log configuration

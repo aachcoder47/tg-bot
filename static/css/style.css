@@ -83,15 +83,16 @@ body {
 }
 
 .btn-nav {
-    border: 1px solid var(--primary);
     padding: 0.5rem 1.2rem;
     border-radius: 4px;
     font-weight: 600;
+    white-space: nowrap;
+    background: var(--primary);
+    color: var(--white) !important;
 }
 
 .btn-nav:hover {
-    background: var(--primary);
-    color: var(--white) !important;
+    background: #2c3e50;
 }
 
 /* Hero */
@@ -162,7 +163,7 @@ body {
 /* Features */
 .features {
     padding: 5rem 0;
-    background: #f1f5f9;
+    background: var(--bg);
 }
 
 .feature-grid {
